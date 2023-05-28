@@ -1,6 +1,6 @@
 tasks:
   - init: docker build . -t rasterize
-    command: docker run -p 8080:8080 rasterize && gp url 8080
+    command: gp url 8080 && docker run -p 8080:8080 rasterize
 
 ports:
   - port: 8080
